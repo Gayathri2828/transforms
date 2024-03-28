@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .translate{
+            height:100px;
+            width:100px;
+            background-color: cornflowerblue;
+            
+            
+           
+        }
+        .scale{
+            height: 100px;
+            width: 100px;
+            background-color: crimson;
+        }
+        .skew{
+            height: 100px;
+            width: 100px;
+            background-color: cyan;
+        }
+        .rotate{
+            height: 100px;
+            width: 100px;
+            background-color: darkslateblue;
+        }
+        input:active~ .translate{
+            transform: translate(100px,100px);
+        }
+        input:active+ .scale{
+            transform: scale(2);
+        }
+        input:active+ .skew{
+            transform: skew(140deg);
+        }
+        input:active+ .rotate{
+            transform: rotate(140deg);
+        }
+        translate::first-letter{
+            color: blue;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="radio"/>translate
+    <div class="translate"></div>
+    <input type="radio"/>scale
+    <div class="scale"></div>
+    <input type="radio"/>skew
+    <div class="skew"></div>
+    <input type="radio"/>rotate
+    <div class="rotate"></div>
+</body>
+</html>
